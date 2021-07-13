@@ -1,0 +1,144 @@
+.heading{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(0, 206, 209, 0.753);
+}
+.manager{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.btn{
+width:60px;
+}
+.name{
+width:371px;
+padding: 0;
+}
+.money{
+width:371px;
+padding: 0;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 20px;
+    padding: 0;
+}
+li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+    background: cornflowerblue;
+    width:50rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+p{
+    text-align: center;
+    width: 350px;
+    font-size: 16px;
+}
+.minus{
+    color:darkred;
+}
+.plus{
+    color:darkgreen;
+}
+.minus:hover{
+color:red;
+}
+.plus:hover{
+    color: green;
+}
+.pm{
+    width: 30px;
+}
+.del{
+    width:15px;
+}
+.times{
+    color:darkred;
+}
+.times:hover{
+     color:red;
+}
+
+@media only screen and (max-width:800px) {
+    li{
+        width:25rem;
+    }
+    .heading{
+        font-size: 24px;
+    }
+    p{
+        font-size: 12px;
+        width: 150px;
+    }
+    .name{
+        width: 171px;
+    }
+    .money{
+        width: 171px;
+    }
+}
+@media only screen and (max-width:400px) {
+    li{
+        width: 16rem;
+    }
+    .heading{
+        font-size: 1rem;
+    }
+    .form{
+        flex-direction: column;
+        gap:5px;
+    }
+    p{
+        font-size: 8px;
+        width: 100px;
+    }
+    .btn{
+        width:100px;
+    }
+}
+.Plus{
+    display: flex;
+    flex-direction: row;
+    row-gap:2px;
+}
+.Minus{
+    display: flex;
+    flex-direction: row;
+    row-gap:2px;  
+}
+.size{
+    width:38px;
+    padding:0;
+    margin:0;
+}
+.add-btn{
+    background-color: cornflowerblue;
+    border:none;
+    width: 25px;
+    padding:0;
+}
+.pm{
+    width: 60px;
+}

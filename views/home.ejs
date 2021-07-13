@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/75e360d1be.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="heading">Personal Expense Manager</h1>
+    <div class="manager">
+
+        <form action="/add-member" class="form" method="POST">
+            <input type="text" class="name" name="name" placeholder="Name">
+            <input type="number" min="0" class="money" name="amount" placeholder="Money">
+            <button type="submit" class="btn">add</button>
+        </form>
+        <ul>
+            <%for ( let i of Expense){ %>
+                <li>
+                    <div class="del">
+                        <a href="/delete/?id=<%=i._id%>">
+                            <i class="fas fa-times times"></i></a>
+                    </div>
+                    <p>
+                        <%=i.name%>
+                    </p>
+                    <p>
+                        Rs. <%=i.money%>
+                    </p>
+                    <div class="pm">
+                        <form action="/add-money/?id=<%=i._id%>" method="POST" class="Plus">
+                            <input type="number" min ="0" class="size" name="addVal">
+                            <button class="add-btn" type="submit">
+                                <i class="fas fa-plus plus"></i>
+                            </button>
+
+                        </form>
+                        <form action="/subtract-money/?id=<%=i._id%>" method="POST" class="Minus">
+                            <input type="number" min="0" class="size" name="subVal">
+                            <button class="add-btn" type="submit">
+                                <i class="fas fa-minus minus"></i></button>
+                        </form>
+                    </div>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
