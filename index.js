@@ -4,6 +4,7 @@ const db= require('./config/mongoose');
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const cool=require('cool-ascii-faces');
 const app=express();
 app.set('view engine', 'ejs');
 
@@ -106,8 +107,14 @@ app.post('/add-member',function(req,res){
         res.redirect('back');
     });
 });
-
-app.listen(5000,function(err){
+app.get('/cool',function(req,res){
+    return res.send(cool());
+})
+let port = process.env.PORT;
+if(port==null || port==""){
+    port=5000;
+}
+app.listen(port,function(err){
     if(err){
         console.log(err);
         return;
